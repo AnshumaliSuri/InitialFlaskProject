@@ -5,11 +5,9 @@ import os
 app = Flask(__name__)
 app.secret_key=os.urandom(24)
 
-conn = psycopg2.connect(database = "MyDatabase",
-                        user = "postgres",
-                        host= 'localhost',
-                        password = "Ganesha@12",
-                        port = 6996)
+conn = psycopg2.connect(
+    # enter your postgre login credentials
+)
 cursor = conn.cursor()
 
 @app.route('/')
